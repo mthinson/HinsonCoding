@@ -1,0 +1,228 @@
+/*
+author:matt hinson
+  class:web design and development
+  Final project:portfolio
+  Date: 10/8/2020
+*/
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color:  #eaf4f4 ;
+    color:#000000;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+/*navigation menu*/
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: darkslategray;
+    font-family: 'Poppins', sans-serif;
+    z-index: 2;
+}
+
+.logo{
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px0;
+}
+.nav-links{
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+}
+.nav-links li{
+    list-style-type: none;
+}
+.nav-links :hover{
+    background-color: #33b2bb;
+    border-radius: 55%;
+}
+
+.nav-links a{
+    color:rgb(255,255,255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+
+.burger{
+    display:none;
+    cursor: pointer;
+}
+.burger div{
+width: 25px;
+height:3px;
+background-color: rgb(226,226,226);
+margin:5px;
+transition: all 0.3s ease;
+}
+
+
+.toggle .line1{
+    transform:rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform:rotate(45deg) translate(-5px, -6px);
+}
+
+.backgroundImg{
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    height:100%;
+    
+}
+
+/* main content*/
+.intro_container{
+  padding-top:35px;
+  padding-left: 35px;
+  padding-bottom:415px;
+  color:whitesmoke;
+}
+
+.image-container{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+}
+
+.me {
+    height:auto;
+    width:100%;
+    border-radius: 50%;
+    
+}
+.about-container{
+    padding-bottom:25px;
+}
+.projects-container{
+    padding-bottom: 25px;
+}
+
+.main-content{
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.about-container{
+    text-align:center;
+   
+}
+/*projects */
+.projects-container{
+  text-align: center;
+   
+}
+.projects{
+    align-items: center;
+    
+}
+.project-items{
+    display: inline-block;
+    height:auto;
+    width: 30%;
+    padding:2%;
+}
+
+/* contact me*/
+.contact-container{
+    background-color: #d9d8da;
+    text-align:center;
+  
+}
+.email .phone{
+    display: inline;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/*small screen size*/
+@media screen and (max-width: 550px){
+  .projects-container{
+      width:100%;
+      align-content: center;
+  }
+.project-items{
+    align-items: center;
+    display:block;
+    width:100%;
+    height:auto;
+}
+}
+
+/* standard size screen*/
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+   .nav-links{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top:8vh;
+       background-color: darkslategray;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 50%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in;
+        z-index: 2;
+   }
+   .nav-links li{
+       opacity:0;
+   }
+   .burger{
+       display: block;
+       
+   }
+ 
+
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+/* animation for menu*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform:50px;
+    }
+    to{
+        opacity: 1;
+        transform:0px;
+    }
+}
+/*skip navigation*/
+p.skipnavigation a{
+    position: absolute;
+    left:-10000px;
+}
+.skipnavigation a:focus, .skipnavigation a:hover{
+    left:0.2em;
+    top:0.2em;
+    background-color:linen;
+    color:#082008;
+    z-index: 2;
