@@ -86,13 +86,15 @@ transition: all 0.3s ease;
     z-index: -1;
     width:100%;
     height:100%;
+    object-fit: cover;
     
 }
 
 /* main content*/
 .intro_container{
-  padding-top:35px;
-  padding-left: 35px;
+  position: relative;
+  padding-top:0;
+  padding-left: 0;
   padding-bottom:415px;
   color:whitesmoke;
 }
@@ -108,6 +110,7 @@ transition: all 0.3s ease;
     height:auto;
     width:100%;
     border-radius: 50%;
+   
     
 }
 .about-container{
